@@ -17,8 +17,8 @@ const favoriteSlice = createSlice({
     removeItemFromFavorite(state, action) {
       const name: string = action.payload;
       // copy favoriteList array to update the reducer
-      const copyArray = state.favoriteList.filter((item: any) =>
-        item.name ? item.name : item.title !== name
+      const copyArray = state.favoriteList.filter(
+        (item: any) => item.name !== name
       );
       state.favoriteList = [...copyArray];
 

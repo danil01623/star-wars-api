@@ -4,9 +4,12 @@ import { useLocation } from "react-router-dom";
 import StarImage from "../assets/images/star.jpeg";
 import ItemInfo from "../Shared/ItemInfo";
 import ReleatedItems from "../Shared/RelatedItems";
+import { useHistory } from "react-router-dom";
+import Button from "../Shared/Button";
 import "../styles/ItemPage.scss";
 
 const ItemPage = () => {
+  const history = useHistory();
   const filterValue = useSelector(
     (state: any) => state.data.selectedFilterValue
   );
@@ -16,8 +19,15 @@ const ItemPage = () => {
 
   const image = StarImage;
 
+  const backHandler = () => {
+    history.goBack();
+  };
+
   return (
     <div className="page-container">
+      <div className="back-button">
+        <Button text="Go back" onClick={backHandler} />
+      </div>
       <div className="item-container">
         <div className="item-img">
           <img src={image} alt={item.name} />

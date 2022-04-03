@@ -13,9 +13,10 @@ const FavoriteList = () => {
   };
 
   return (
-    <div className="list">
-      <Button text="Go back" onClick={backHandler} />
-
+    <div className="favorite-list">
+      <div className="back-button">
+        <Button text="Go back" onClick={backHandler} />
+      </div>
       {items?.length ? (
         <div className="list-item-container">
           {items.map((item: any) => {
@@ -26,7 +27,6 @@ const FavoriteList = () => {
       ) : (
         <>
           <h2>No favorites added</h2>
-          <Button text="Go back" onClick={backHandler} />
         </>
       )}
     </div>

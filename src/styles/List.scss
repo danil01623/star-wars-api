@@ -52,6 +52,16 @@
   }
 }
 
+.favorite-list {
+  margin-top: 5%;
+
+  .back-button {
+    display: flex;
+    padding-left: 10%;
+    margin-bottom: 5%;
+  }
+}
+
 @media only screen and (max-width: 584px) {
   .list-item-container {
     display: block;
