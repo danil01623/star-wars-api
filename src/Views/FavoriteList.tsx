@@ -18,9 +18,10 @@ const FavoriteList = () => {
 
       {items?.length ? (
         <div className="list-item-container">
-          {items.map((item: any) => (
-            <ListItem key={item.name} item={item} />
-          ))}
+          {items.map((item: any) => {
+            const name = item.name ? item.name : item.title;
+            return <ListItem key={name} item={item} />;
+          })}
         </div>
       ) : (
         <>

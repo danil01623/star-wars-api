@@ -20,8 +20,11 @@ const ListItem: React.FC<{ item: any }> = React.memo((props) => {
   const image = StarImage;
 
   const checkExistingItem = useCallback(() => {
-    return favoriteList.find((favorite: any) => favorite.name === item.name);
-  }, [favoriteList, item.name]);
+    const name = item.name ? item.name : item.title;
+    return favoriteList.find((favorite: any) =>
+      favorite.name ? favorite.name : favorite.title === name
+    );
+  }, [favoriteList, item.name, item.title]);
 
   useEffect(() => {
     const existingItem = checkExistingItem();
@@ -38,7 +41,9 @@ const ListItem: React.FC<{ item: any }> = React.memo((props) => {
     if (!existingItem) {
       dispatch(favoriteActions.addItemToFavorite(item));
     } else {
-      dispatch(favoriteActions.removeItemFromFavorite(existingItem.name));
+      const name = existingItem.name ? existingItem.name : existingItem.title;
+
+      dispatch(favoriteActions.removeItemFromFavorite(name));
     }
   };
 
