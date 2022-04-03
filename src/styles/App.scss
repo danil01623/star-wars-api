@@ -1,5 +1,12 @@
+$dark_header_background: #202020;
+$dark_header_color: #fee300;
+$star_wars_fonts: StarWars, serif;
+$letter_spacing: 2px;
+
 .App {
   text-align: center;
+  font-family: $star_wars_fonts;
+  letter-spacing: $letter_spacing;
 }
 
 .App-logo {

@@ -1,0 +1,52 @@
+@import "./App.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1rem 10%;
+  height: 5rem;
+  background-color: $dark_header_background;
+
+  .logo {
+    font-size: 1.5rem;
+    color: $dark_header_color;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .navigation {
+    ul {
+      list-style-type: none;
+    }
+    a {
+      text-decoration: none;
+      color: $dark_header_color;
+      font-size: 1rem;
+    }
+  }
+
+  .badge {
+    border-radius: 50%;
+    text-align: center;
+    padding: 6px 6px;
+    display: inline-block;
+    background-color: $dark_header_color;
+    color: black;
+  }
+}
+
+@media only screen and (max-width: 584px) {
+  .logo {
+    font-size: 1rem !important;
+  }
+
+  .navigation a {
+    font-size: 0.8rem !important;
+  }
+}

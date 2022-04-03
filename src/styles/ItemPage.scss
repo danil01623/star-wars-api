@@ -1,0 +1,44 @@
+@import "./App.scss";
+
+.item-container {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  margin: 15% auto;
+  border: 1px solid yellow;
+  padding: 1.5rem;
+
+  .item-img img {
+    max-width: 300px;
+  }
+
+  .item-info {
+    color: yellow;
+    margin-left: 25%;
+
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+.additional-info {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 584px) {
+  .item-container {
+    flex-direction: column;
+    width: auto;
+  }
+
+  .additional-info {
+    flex-direction: column;
+
+    .box-container {
+      width: 80%;
+      margin: 10px auto;
+    }
+  }
+}

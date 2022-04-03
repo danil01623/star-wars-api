@@ -1,0 +1,20 @@
+.homepage-container {
+  .list-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px auto;
+    width: 100%;
+    max-width: 1500px;
+  }
+
+  .homepage-content {
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (max-width: 584px) {
+  .list-options {
+    flex-direction: column;
+  }
+}

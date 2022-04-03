@@ -1,0 +1,95 @@
+@import "./App.scss";
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  label {
+    margin: 3%;
+    color: $dark_header_color;
+  }
+
+  select {
+    width: 250px;
+    height: 40px;
+    margin-top: 2%;
+    border-color: $dark_header_color;
+    color: $dark_header_color;
+    background-color: transparent;
+    border-radius: 3px;
+    font-family: $star_wars_fonts;
+    letter-spacing: $letter_spacing;
+  }
+}
+
+.button {
+  width: 10%;
+  height: 40px;
+  border-color: $dark_header_color;
+  color: $dark_header_color;
+  background-color: transparent;
+  border-radius: 3px;
+  font-family: $star_wars_fonts;
+  letter-spacing: $letter_spacing;
+  cursor: pointer;
+}
+
+.search {
+  label {
+    margin: 3%;
+    color: $dark_header_color;
+  }
+  input {
+    width: 250px;
+    height: 40px;
+    margin-top: 2%;
+    // margin-left: 20%;
+    border-color: #fee300;
+    color: #fee300;
+    background-color: transparent;
+    border-radius: 3px;
+    font-family: StarWars, serif;
+    letter-spacing: 2px;
+  }
+}
+
+.box-container {
+  border: 1px solid $dark_header_color;
+  color: $dark_header_color;
+  width: 40%;
+
+  .box-header {
+    border-bottom: 1px solid $dark_header_color;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+.spin::before {
+  animation: 1.5s linear infinite spinner;
+  animation-play-state: inherit;
+  border: solid 5px black;
+  border-bottom-color: $dark_header_color;
+  border-radius: 50%;
+  content: "";
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: transform;
+}
+
+@media only screen and (max-width: 584px) {
+  .button {
+    width: 30%;
+  }
+}
