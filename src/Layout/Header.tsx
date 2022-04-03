@@ -16,7 +16,10 @@ const Header = () => {
         <ul>
           <li>
             <Link to="/favorites">
-              Favorite List <span className="badge">{amount}</span>
+              Favorite List{" "}
+              <span data-testid="favoriteAmount" className="badge">
+                {amount}
+              </span>
             </Link>
           </li>
         </ul>

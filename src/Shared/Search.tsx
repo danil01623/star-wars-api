@@ -29,6 +29,7 @@ const Search = () => {
     <div className="search">
       <label>Search data</label>
       <input
+        data-testid="input"
         type="text"
         placeholder="Search any...."
         onChange={debouncedResults}

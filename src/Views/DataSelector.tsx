@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { withRouter } from "react-router-dom";
 
-// import { useNavigate } from "react-router-dom";
 import { fetchData } from "../store/actions/data-actions";
 import Dropdown from "../Shared/Dropdown";
 import Button from "../Shared/Button";

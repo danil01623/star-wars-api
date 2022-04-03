@@ -11,6 +11,8 @@ export const fetchData = (type: string) => {
         throw new Error("Could not fetch data");
       }
       const data = await response.json();
+      dispatch(dataActions.listData(data.results));
+
       return data.results;
     };
 

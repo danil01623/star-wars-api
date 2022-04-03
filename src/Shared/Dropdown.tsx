@@ -11,9 +11,9 @@ const Dropdown: React.FC<{
   return (
     <div className="dropdown">
       <label>{label}</label>
-      <select value={value} onChange={onChange}>
+      <select value={value} onChange={onChange} data-testid="select">
         {options.map((option, index) => (
-          <option key={index} value={option}>
+          <option key={index} value={option} data-testid="select-option">
             {option}
           </option>
         ))}
