@@ -4,6 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How the project is built
 
+- I used the SWAPI api to fetch data.
 - I used Redux Toolkit as a state managment library. I used Toolkit to avoid writing all the required code that Redux need for setup and also using Redux hooks like useSelector and useDispatch made things sort and easy to use.
 - I used Typescript over JS because with Typescirpt ie easier to reafactor the code in the future, is more reliable can help to avoid future errors and also gives great support to IDE.
 - I used React Testing Library to write some basic tests.
